@@ -1,0 +1,49 @@
+@import "@/variables.scss";
+
+.input {
+    border-radius: 0;
+    padding: 1.125em 1em;
+    outline: 0;
+    border: 0;
+    transition: all 0.2s ease-in-out;
+
+    &.standard {
+        background-color: transparent;
+        border-bottom: 1px solid $color-700;
+        color: $color-700;
+    }
+    &.filled {
+        border-radius: 0.375em 0.375em 0 0;
+        background-color: white;
+        border-bottom: 1px solid $color-700;
+        color: $color-700;
+        &:hover {
+            background-color: $color-50;
+        }
+        &:focus {
+            background-color: $color-100;
+        }
+        &:active {
+            background-color: $color-200;
+        }
+    }
+    &.outlined {
+        border: 1px solid $color-700;
+        border-radius: 0.375em;
+        background-color: white;
+        &:hover {
+            background-color: $color-50;
+        }
+        &:focus {
+            background-color: $color-100;
+        }
+        &:active {
+            background-color: $color-200;
+        }
+    }
+
+    input[type="password"]::-ms-reveal,
+    input[type="password"]::-ms-clear {
+        background-color: red;
+    }
+}

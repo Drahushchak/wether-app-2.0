@@ -1,0 +1,174 @@
+@import '@/variables.scss';
+
+.weatherDetail {
+    container-type: inline-size;
+    width: 100%;
+
+    :global(.grid) {
+        display: grid;
+        grid-template-areas:
+            "temperature condition humidity wind"
+            "sun condition pressure uv";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    :global(.temperature) {
+        grid-area: temperature;
+        display: flex;
+        flex-direction: column;
+        :global(.feelsLike) {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            :global(b) {
+                font-size: 32px;
+                font-weight: bold;
+            }
+        }
+        :global(.value) {
+            font-size: 80px;
+            font-weight: bold;
+            background: -webkit-linear-gradient(65deg, $color-100 20%, $color-600 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    :global(.sun) {
+        grid-area: sun;
+        display: flex;
+        flex-direction: column;
+        :global(.sunrise), :global(.sunset) {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            :global(.time) {
+                display: flex;
+                flex-direction: column;
+            }
+            :global(svg) {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+
+    :global(.condition) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        :global(span) {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        :global(svg) {
+            width: 270px;
+            height: 270px;
+        }
+
+        grid-area: condition;
+    }
+
+    :global(.humidity) {
+        grid-area: humidity;
+    }
+
+    :global(.pressure) {
+        grid-area: pressure;
+    }
+
+    :global(.wind) {
+        grid-area: wind;
+    }
+
+    :global(.uv) {
+        grid-area: uv;
+    }
+
+    :global(.measurements) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        :global(svg) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @container(max-width: 665px) {
+        :global(.grid) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            "temperature condition"
+            "sun condition"
+            "humidity  wind"
+            "pressure uv";
+            :global(.temperature), :global(.sun) {
+                align-items: center;
+                justify-content: end;
+            }
+        }
+    }
+
+    @container(max-width: 514px) {
+        :global(.grid) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            "temperature sun"
+            "condition condition"
+            "condition condition"
+            "humidity  wind"
+            "pressure uv";
+            :global(.temperature), :global(.sun) {
+                align-items: center;
+                justify-content: end;
+            }
+        }
+    }
+    @container(max-width: 432px) {
+        :global(.grid) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            "temperature temperature"
+            "sun sun"
+            "condition condition"
+            "condition condition"
+            "humidity  wind"
+            "pressure uv";
+            :global(.temperature), :global(.sun) {
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    @container(max-width: 270px) {
+        :global(.grid) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            "temperature temperature"
+            "sun sun"
+            "condition condition"
+            "condition condition"
+            "humidity humidity"
+            "wind wind"
+            "pressure pressure"
+            "uv uv";
+            :global(.temperature), :global(.sun) {
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

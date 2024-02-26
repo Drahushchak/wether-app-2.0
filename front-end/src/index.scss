@@ -1,0 +1,60 @@
+@import '@/fonts.scss';
+@import '@/variables.scss';
+
+:root {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #EEF2F5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  font-size: calc(15px + 0.390625vw);
+  margin: 0;
+  display: flex;
+  background-color: $color-100;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1.125rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.875rem;
+}
+
+
+p, span, a, li, input, button, label, select, textarea {
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, ul, li, input, button, label, select, textarea, div {
+  margin: 0;
+  padding: 0;
+  color: $color-950;
+}

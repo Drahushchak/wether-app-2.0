@@ -1,0 +1,60 @@
+@import '@/variables.scss';
+
+.weatherHourlyCard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        & > :global(h2) {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        position: relative;
+}
+
+.hourWeather {
+    display: flex;
+    justify-content: center;
+    &:has(input:checked) {
+        :global(.hourWeatherCard) {
+            * {
+                color: $color-950;
+            }
+            &:global(.day) {
+                background: linear-gradient(140deg, #fdc78d 0%, #f9f1d1 100%);
+            }
+            &:global(.night) {
+                background: linear-gradient(140deg, #9794a6 0%, #d5cfdf 100%);
+            }
+        }
+    }
+    & input {
+        display: none;
+    }
+    :global(.hourWeatherCard) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 25px 18px 25px;
+        border-radius: 40px;
+        box-shadow: none;
+        width: 80px;
+        &:global(.day) {
+            background: linear-gradient(140deg, #F88508 0%, #ffe477 100%);
+        }
+        &:global(.night) {
+            background: linear-gradient(140deg, #443D64 0%, #9a8cb6 100%);
+        }
+        :global(.condition) {
+            width: 80px;
+            height: 80px;
+        }
+        :global(.windDirection) {
+            width: 42px;
+            height: 42px;
+            transform: rotate(180deg);
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@import '@/variables.scss';
+
+.button {
+    border: 2px solid;
+    border-radius: 0.375em;
+    padding: 1.125em 2.5em;
+    transition: all 0.2s ease-in-out;
+    outline: 0;
+    color: black;
+    border: none;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+
+    &.raised {
+       background-color: $color-500;
+       color: white;
+       &:hover {
+           background-color: $color-600;
+       }
+       &:focus {
+           background-color: $color-700;
+       }
+       &:active {
+           background-color: $color-700;
+       }
+       &:disabled {
+           background-color: $color-200;
+           color: $color-700;
+       }
+    }
+
+    &.outlined {
+        background-color: white;
+        border: 1px solid $color-700;
+        color: $color-700;
+        &:hover {
+            background-color: $color-50;
+        }
+        &:focus {
+            background-color: $color-100;
+        }
+        &:active {
+            background-color: $color-100;
+        }
+    }
+
+    &.gradient {
+        background: linear-gradient(90deg, $color-400, $color-600);
+        color: white;
+        &:hover {
+            background: linear-gradient(90deg, $color-500, $color-700);
+        }
+        &:focus {
+            background: linear-gradient(90deg, $color-600, $color-800);
+        }
+        &:active {
+            background: linear-gradient(90deg, $color-600, $color-800);
+        }
+        &:disabled {
+            background: linear-gradient(90deg, $color-100, $color-300);
+            color: $color-700;
+        }
+    }
+}

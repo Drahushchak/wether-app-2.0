@@ -1,0 +1,15 @@
+@import "@/variables.scss";
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    &>:global(h1) {
+        color: $color-100 !important;
+    }
+    &>:global(img) {
+        width: 48px;
+        height: 48px;
+    }
+}

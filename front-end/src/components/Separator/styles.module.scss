@@ -1,0 +1,25 @@
+@import '@/variables.scss';
+
+.separator {
+    display: flex;
+    align-items: center;
+
+    :global(.content) {
+        margin-inline: 10px;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    }
+}

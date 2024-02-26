@@ -1,0 +1,35 @@
+@import "@/variables.scss";
+
+
+
+.weather {
+
+    :global(.weatherSlide) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    :global(.title) {
+        font-size: 42px;
+        font-weight: 500;
+        color: $color-50;
+        margin-bottom: 20px;
+    }
+
+    :global(.weatherCardContainer) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    :global(.swiper-button-next), :global(.swiper-button-prev) {
+        color: $color-50;
+    }
+    :global(.sizedCards) {
+        max-width: 780px;
+        margin-inline: 20px;
+    }
+}
